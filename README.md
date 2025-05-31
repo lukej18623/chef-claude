@@ -1,33 +1,32 @@
-# Chef Claude 🍳✨
+# Chef Claude
 
-**Chef Claude** is a React application built with Vite. It allows users to input a list of ingredients and then generates a unique recipe by calling the **Anthropic API**.
+Chef Claude is a React application built with Vite. It allows users to input a list of ingredients and then generates a recipe by calling the Anthropic API.
 
 ---
 
-## 🚀 Features
+## Features
 
-✅ **Ingredient Input**  
+**Ingredient Input**
 Users can enter the ingredients they have on hand.
 
-✅ **Recipe Generation**  
+**Recipe Generation**
 Chef Claude sends the ingredients to the Anthropic API to generate a creative recipe idea.
 
-✅ **Dynamic Updates**  
+**Dynamic Updates**  
 The generated recipe is dynamically displayed on the page.
 
 ---
 
-## ⚡️ Technologies
+## Technologies
 
-- **Vite** – for blazing fast React development
-- **React** – for building an interactive UI
-- **Anthropic API** – for AI-powered recipe generation
+- **React** for building an interactive UI
+- **Anthropic API** for recipe generation
 
 ---
 
-## 🛠️ Getting Started
+## How to Use
 
-1️⃣ **Clone the repository:**
+**Clone the repository:**
 
 ```bash
 git clone https://github.com/yourusername/chef-claude.git
