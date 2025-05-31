@@ -1,3 +1,5 @@
+import Anthropic from "@anthropic-ai/sdk";
+
 const SYSTEM_PROMPT = `
 You are an assistant that receives a list of ingredients that a user has and
 suggests a recipe they could make with some or all of those ingredients. You
@@ -15,7 +17,7 @@ const anthropic = new Anthropic({
 export async function getRecipeFromChefClaude(ingredients) {
   const ingredientsString = ingredients.join(", ");
 
-  const msg = await anthropic.message.create({
+  const msg = await anthropic.messages.create({
     model: "claude-3-haiku-20240307",
     max_tokens: 1024,
     system: SYSTEM_PROMPT,

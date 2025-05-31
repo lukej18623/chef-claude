@@ -5,15 +5,16 @@ import { getRecipeFromChefClaude } from "../../ai";
 
 export default function Main() {
   const [ingredients, setIngredients] = useState([]);
-  const [recipeShown, setRecipeShown] = useState(false);
+  const [recipe, setRecipe] = useState("");
 
   function handleSubmit(formData) {
     const newIngredient = formData.get("ingredient");
     setIngredients((prev) => [...prev, newIngredient]);
   }
 
-  function toggle() {
-    setRecipeShown((prev) => !prev);
+  async function getRecipe() {
+    const generatedRecipe = await getRecipeFromChefClaude(ingredients);
+    setRecipe(generatedRecipe);
   }
 
   return (
@@ -28,9 +29,9 @@ export default function Main() {
         <button>Add Ingredient</button>
       </form>
       {ingredients.length > 0 && (
-        <IngredientsList ingredients={ingredients} toggle={toggle} />
+        <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />
       )}
-      {recipeShown && <ClaudeRecipe />}
+      {recipe && <ClaudeRecipe recipe={recipe} />}
     </main>
   );
 }
