@@ -9,7 +9,7 @@ export default function IngredientsList(props) {
       <ul className="ingredients-list" aria-live="polite">
         {ingredientList}
       </ul>
-      {ingredientList.length > 3 ? (
+      {ingredientList.length > 3 && (
         <div className="get-recipe-container">
           <div>
             <h3>Ready for a recipe?</h3>
@@ -17,7 +17,7 @@ export default function IngredientsList(props) {
           </div>
           <button onClick={props.getRecipe}>Get a recipe</button>
         </div>
-      ) : null}
+      )}
     </section>
   );
 }
