@@ -17,7 +17,7 @@ Chef Claude is a React application built with Vite. It allows users to input a l
 
 ## How to Use
 
-**Clone the repository:**
+Clone the repository:
 
 ```bash
 git clone https://github.com/yourusername/chef-claude.git
